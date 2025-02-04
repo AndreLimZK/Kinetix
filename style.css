@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #C1C1C1;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100vw;
+}
+
+.nav-bar {
+    text-decoration: none;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw; 
+    color: #232323;
+    margin: 0 1vw;
+}
+
+.nav-icon {
+    height: 3vh; 
+    width: auto; 
+}
+
+.grp-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grp-2 a {
+    margin-right: 5vw;
+}
