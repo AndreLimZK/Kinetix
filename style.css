@@ -282,8 +282,8 @@ footer .footer-bottom {
 
 /* orders.html */
 
-.order-container .item img {
-    object-fit: cover;
+.order-container .ordered-shoe img {
+    object-fit: cover !important;
 }
 
 .order-container {
@@ -446,4 +446,141 @@ footer .footer-bottom {
 
 .rewards-footer {
     margin-top: 5vh !important;
+}
+
+/* Daily Reward Overlay */
+.daily-overlay, .gacha-overlay, .gacha-pic-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.daily-overlay.show, .gacha-overlay.show, .gacha-pic-overlay.show {
+    display: flex;
+    animation: fadeIn 0.5s;
+}
+
+.daily-overlay-content, .gacha-overlay-content, .gacha-pic-overlay-content {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 5vh 2vw;
+    text-align: center;
+    width: 80%;
+    max-width: 20%;
+    animation: popUp 0.5s ease-out;
+}
+
+.daily-overlay-content .daily-logo, .gacha-overlay-content .daily-logo, .gacha-pic-overlay-content .daily-logo {
+    align-self: center; 
+    max-width: 25%;
+    height: auto; 
+}
+
+.daily-overlay p, .gacha-overlay p {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    color: #000000;
+}
+
+.claim-daily, .spin-daily {
+    border-radius: 25vw;
+    padding: 2vh 1vw;
+    line-height: 150%;
+    width: 40%;
+    display: block;
+    border-style: none;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2vw;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    align-self: center;
+}
+
+.gacha-pic-overlay-content {
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.gacha-pic-overlay p {
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1vw;
+    color: #000000;
+    margin: 0.3vh;
+    padding: 0;
+}
+
+.rates-name {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+}
+
+.rates-chance {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-end;
+}
+
+#rates-common {
+    color: #8C8C8C;
+}
+
+#rates-uncommon {
+    color: #40BB4E;
+}
+
+#rates-rare {
+    color: #35AFDE;
+}
+
+#rates-epic {
+    color: #BB00FF;
+}
+
+#rates-legendary {
+    color: #FFBE55;
+}
+
+#rates-secret {
+    color: #FF0004;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

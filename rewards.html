@@ -55,12 +55,12 @@
             <div class="dailies">
                 <h3>Daily Rewards</h3>
                 <p>Time before next reward: 00:00:00</p>
-                <button class="claim-button" type="button"> Claim </button>
+                <button class="claim-button" type="button" onclick="openOverlay('daily-overlay')"> Claim </button>
             </div>
             <div class="gacha">
                 <h3>Gacha</h3>
                 <p>1x Kinetix Coin</p>
-                <button class="claim-button" type="button"> Spin </button>
+                <button class="claim-button" type="button" onclick="openOverlay('gacha-overlay')"> Spin </button>
             </div>
             <div class="vouchers">
                 <h3>Vouchers</h3>
@@ -110,5 +110,41 @@
             </div>
         </div>
     </footer>
+    <div id="daily-overlay" class="daily-overlay">
+        <div class="daily-overlay-content">
+            <img class="daily-logo" src="images/kinetix-logo.png" alt="Kinetix Logo">
+            <p>Here’s your daily login reward!</p>
+            <img class="coin" src="images/coin.svg" alt="Coin" height="100px" width="auto">
+            <button class="claim-daily" type="button">CLAIM</button>
+        </div>
+    </div>
+    <div id="gacha-overlay" class="gacha-overlay">
+        <div class="gacha-overlay-content">
+            <img class="daily-logo" src="images/kinetix-logo.png" alt="Kinetix Logo">
+            <img class="coin" src="images/gacha-pic.png" onclick="openOverlay('gacha-pic-overlay')"     alt="Gacha Picture">
+            <button class="spin-daily" type="button">SPIN</button>
+        </div>
+    </div>
+    <div id="gacha-pic-overlay" class="gacha-pic-overlay">
+        <div class="gacha-pic-overlay-content">
+            <div class="rates-name">
+                <p>100 Kinetix Points</p>
+                <p>200 Kinetix Points</p>
+                <p>500 Kinetix Points</p>
+                <p>10% Off Voucher</p>
+                <p>1 Pair of Running Shoes</p>
+                <p>Secret Title</p>
+            </div>
+            <div class="rates-chance">
+                <p id="rates-common">70.00%</p>
+                <p id="rates-uncommon">20.00%</p>
+                <p id="rates-rare">10.00%</p>
+                <p id="rates-epic">1.00%</p>
+                <p id="rates-legendary">0.25%</p>
+                <p id="rates-secret">0.10%</p>
+            </div>
+        </div>
+    </div>
+    <script src="daily.js"></script>
 </body>
 </html>
