@@ -30,6 +30,7 @@ nav {
 .nav-icon {
     height: 3vh; 
     width: auto; 
+    margin-right: 3vw;  
 }
 
 .grp-2 {
@@ -38,7 +39,17 @@ nav {
 }
 
 .grp-2 a {
-    margin-right: 5vw;
+    margin-right: 6vw;
+}
+
+.grp-3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.1vw;
+}
+
+.grp-3 a {
+    margin: 0;
 }
 
 /* Footer */
