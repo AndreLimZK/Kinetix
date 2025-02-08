@@ -39,8 +39,18 @@
                 <div class="login-country">
                     <p>Country:</p>
                     <div class="country-2">
-                        <p>Singapore</p>
-                        <p>Change</p>
+                        <p id="selected-country">Singapore</p>
+                        <p id="change-country" onclick="toggleCountryDropdown()">Change</p>
+                    </div>
+                    <div id="country-dropdown" class="dropdown-content">
+                        <select onchange="selectCountry(event)">
+                            <option value="Singapore">Singapore</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <!-- Add more countries as needed -->
+                        </select>
                     </div>
                 </div>
                 <input type="email" placeholder="Email" name="email" required>
@@ -83,51 +93,68 @@
         <div class="content-page">
             <!-- featured -->
             <div class="box-content">
-                <div class="box-image">
-                    <img src="" alt="Featured shoes">
+                <div class="box-image-featured">
                     <p>Check out our shoes for the week!</p>
-                    <strong>FEATURED</strong>
+                    <strong>Designed for Performance. Styled for You.</strong>
                 </div>
             </div>
             <!-- classic models -->
-            <h3>Classic models</h3>
-            <div class="box-content">
-                <img src="" alt="Shoe 1">
-                <img src="" alt="Shoe 2">
-                <img src="" alt="Shoe 3">
-                <img src="" alt="Shoe 4">
-                <img src="" alt="Shoe 5">
+            <div class="classic-container">
+                <h3>Classic Models</h3>
+                <div class="classic-box-content">
+                    <div class="classic-box">
+                        <img src="images/model-1.jpg" alt="Model 1">
+                        <div class="classic-text">Dragonfly</div>
+                    </div>
+                    <div class="classic-box">
+                        <img src="images/model-2.jpg" alt="Model 2">
+                        <div class="classic-text">Invisible</div>
+                    </div>
+                    <div class="classic-box">
+                        <img src="images/model-3.jpg" alt="Model 3">
+                        <div class="classic-text">Unlimited</div>
+                    </div>
+                    <div class="classic-box">
+                        <img src="images/model-4.jpg" alt="Model 4">
+                        <div class="classic-text">Phoenix</div>
+                    </div>
+                    <div class="classic-box">
+                        <img src="images/model-5.jpg" alt="Model 5">
+                        <div class="classic-text">Maximum</div>
+                    </div>
+                </div>
             </div>
-            
+
             <!-- Search by -->
-            <h3>Search by</h3>
+            <h3 class="search-by">Search by</h3>
             <!-- Men's section -->
-                <div class="box-content">
-                    <div class="box-image">
-                        <img src="" alt="Men's Shoes">
+            <div class="gender-container">
+                <div class="gender-box-content">
+                    <div class="gender-box-image">
+                        <img src="images/men.jpg" alt="Men's Shoes">
                         <b>MEN</b>
                     </div>
                 </div>
-            <!-- Women's section -->
-            <div class="box-content">
-                <div class="box-image">
-                    <img src="" alt="Women's Shoes">
-                    <b>WOMEN</b>
+                <!-- Women's section -->
+                <div class="gender-box-content">
+                    <div class="gender-box-image">
+                        <img src="images/women.jpg" alt="Women's Shoes">
+                        <b>WOMEN</b>
+                    </div>
+                </div>
+                <!-- Kid's section -->
+                <div class="gender-box-content">
+                    <div class="gender-box-image">
+                        <img src="images/kids.jpg" alt="Kid's Shoes">
+                        <b>KIDS</b>
+                    </div>
                 </div>
             </div>
-            <!-- Kid's section -->
-            <div class="box-content">
-                <div class="box-image">
-                    <img src="" alt="Kid's Shoes">
-                    <b>KIDS</b>
-                </div>
-            </div>
-            
         </div>
     </div>
 
     <!-- footer -->
-    <footer>
+    <footer class="index-footer">
         <div class="footer-container">
             <h4> KINETIX'S RUNNING SHOE </h4>
             <div class="footer-content">

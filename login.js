@@ -16,13 +16,32 @@ function handleAccountClick() {
 function handleLogin(event) {
     event.preventDefault(); // Prevent form submission
 
-    // Perform login logic here (e.g., validate email)
+    // Get the email and country values
+    const email = event.target.email.value;
+    const country = document.getElementById('selected-country').textContent;
+
+    // Store the email and country in localStorage
+    localStorage.setItem('email', email);
+    localStorage.setItem('country', country);
+
+    // Mask the email
+    const maskedEmail = maskEmail(email);
+
+    // Display the masked email in the OTP overlay
+    document.querySelector('.login-sent p').textContent = `A verification code has been sent to ${maskedEmail}`;
 
     // Close the login overlay
     document.getElementById('login-overlay').style.display = 'none';
 
     // Open the OTP overlay
     document.getElementById('otp-overlay').style.display = 'block';
+}
+
+// Function to mask the email
+function maskEmail(email) {
+    const [localPart, domain] = email.split('@');
+    const maskedLocalPart = `${localPart[0]}*****${localPart.slice(-1)}`;
+    return `${maskedLocalPart}@${domain}`;
 }
 
 // Function to handle OTP verification (this should be called on form submission)
@@ -77,6 +96,25 @@ function handleClickOutside(event) {
     if (event.target === otpOverlay) {
         otpOverlay.style.display = 'none';
     }
+}
+
+// Function to toggle the country dropdown
+function toggleCountryDropdown() {
+    const dropdown = document.getElementById('country-dropdown');
+    
+    // Ensure it's actually being toggled
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
+    }
+}
+
+// Function to select a country from the dropdown
+function selectCountry(event) {
+    const selectedCountry = event.target.value;
+    document.getElementById('selected-country').textContent = selectedCountry;
+    document.getElementById('country-dropdown').style.display = 'none';
 }
 
 // Add event listener to the login form

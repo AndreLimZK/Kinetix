@@ -61,13 +61,10 @@
 
             <div class="account-details">
                 <div class="email">
-                    Email: 
-                </div>
-                <div class="password">
-                    Password: 
+                    Email: <span id="user-email"></span>
                 </div>
                 <div class="country">
-                    Country: 
+                    Country: <span id="user-country"></span>
                 </div>
                 <div class="shipping_addy">
                     Shipping Address: 
@@ -113,5 +110,14 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Retrieve the email and country from localStorage
+        const email = localStorage.getItem('email');
+        const country = localStorage.getItem('country');
+
+        // Display the email and country on the account page
+        document.getElementById('user-email').textContent = email;
+        document.getElementById('user-country').textContent = country;
+    </script>
 </body>
 </html>
