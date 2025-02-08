@@ -3,6 +3,8 @@ body {
     padding: 0;
 }
 
+/* Navigation Bar */
+
 nav {
     background-color: #C1C1C1;
     padding-top: 4vh;
@@ -34,5 +36,414 @@ nav {
 }
 
 .grp-2 a {
+    margin-right: 5vw;
+}
+
+/* Footer */
+
+footer {
+    background-color: #000000;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100vw;
+    margin-top: 50vh;
+}
+
+footer h4 {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw; 
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content p {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 0.8vw;
+    color: #FFFFFF;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 1vh; 
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+footer .footer-bottom p {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 0.8vw;
+    color: #FFFFFF;
+}
+
+footer .footer-bottom {
+    display: flex;
+    gap: 4vw; 
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 2vw;
+    margin-top: 5vh;
+}
+
+/* contact.html */
+
+#contact-title {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vw;
+    color: #232323;
+    margin-left: 15vw;
+}
+
+#contact-sub {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    gap: 8vw; 
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-section h4 {
+    font-size: 1.5vw;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.contact-section p {
+    line-height: 1.5;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.contact-section img {
+    border-radius: 50%;
+}
+
+.contact-divider {
+    width: 80%;
+    height: 0.1vh; 
+    background-color: #B5B5B5;
+    border: none;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+/* account.html */
+
+.sidebar a img {
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.sidebar a {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 1vw;
+    color: #232323;
+    text-decoration: none;
+}
+
+.sidebar {
+    display: flex;
+    justify-content: center;
+    gap: 0vh; 
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 3vw;
     margin-right: 5vw;
+    margin-top: 5vh;
+}
+
+.account-options {
+    display: flex;
+    flex-direction: row;
+}
+
+.account-options a {
+    display: flex;
+    align-items: center;
+}
+
+.account-options a img {
+    margin-right: 1vw;
+}
+
+.sidebar hr {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: -1vw;
+    width: 150%; 
+    height: 0.1vh; 
+    background-color: #B5B5B5;
+    border: none;
+    display: block; 
+}
+
+.account-container {
+    display: flex;
+    gap: 8vw; 
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 5vh;
+}
+
+.vertical-line {
+    width: 0.1vh; 
+    height: 100vh; 
+    background-color: #B5B5B5;
+    border: none;
+    display: block;
+    margin-left: -7vw;
+    margin-right: 0vw;  
+}
+
+.id img {
+    border-radius: 50%;
+}
+
+.id {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+    margin-top: 4vh;
+}
+
+.id h4 {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    color: #232323;
+}
+
+.account-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+}
+
+.edit-account {
+    border-radius: 25vw;
+    padding: 2vh 1vw;
+    line-height: 100%;
+    display: inline-block;
+    border-width: 0.1vh;
+    border-color: #B5B5B5;
+    border-style: solid;
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8vw;
+    background-color: white;
+    margin-left: 4vw;
+  }
+
+.account-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin-top: 4vh;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+}
+.account-footer {
+    margin-top: 5vh !important;
+}
+
+/* orders.html */
+
+.order-container .item img {
+    object-fit: cover;
+}
+
+.order-container {
+    display: flex;
+    gap: 1vh; 
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5vh;
+    margin-left: -3vw;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    align-items: center;
+}
+
+.order-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.order-info p, .order-info h3 {
+    margin: 0;
+  }
+
+.order-header h3 {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    color: #000000;
+}
+
+.delivery-status p {
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8vw;
+    color: #B5B5B5;
+}
+
+.item h3 {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    color: #000000;
+}
+
+.details p {
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8vw;
+    color: #000000;
+}
+
+.order-container hr {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: -1vw;
+    width: 440%; 
+    height: 0.1vh; 
+    background-color: #B5B5B5;
+    border: none;
+    display: block; 
+}
+
+.contact-footer {
+    margin-top: 5vh !important;
+}
+
+/* settings.html */
+
+.settings-container {
+    display: flex;
+    gap: 5vh;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5vh;
+    margin-left: -3vw;
+    width: 100%;
+}
+
+.settings-container > div {
+    width: 100%;
+}
+
+.settings-container hr {
+    margin: 2vh 0;
+    width: 97%;
+    height: 0.1vh;
+    background-color: #B5B5B5;
+    border: none;
+    display: block;
+    margin-left: -1vw;
+}
+
+.settings-container p {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    color: #000000;
+}
+
+.settings-footer {
+    margin-top: 5vh !important;
+}
+
+/* rewards.html */
+
+.rewards-container {
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5vh;
+    margin-left: -3vw;
+    width: 100%;
+}
+
+.rewards-container h3 {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    color: #000000;
+}
+
+.rewards-container p {
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8vw;
+    color: #000000;
+}
+
+.claim-button {
+    border-radius: 25vw;
+    padding: 2vh 2vw;
+    line-height: 100%;
+    display: inline-block;
+    border-style: none;
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8vw;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.vouchers img {
+    width: 5vw;
+    height: auto;
+}
+
+.rewards-footer {
+    margin-top: 5vh !important;
 }
