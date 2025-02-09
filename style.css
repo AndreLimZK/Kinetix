@@ -1328,7 +1328,7 @@ img.logo {
 /* Shopping Cart Styles */
 
 .shopping-cart {
-    width: 80%;
+    width: 80vw;
     margin: 0 auto;
     margin-top: 5vh;
     font-family: "Montserrat", serif;
@@ -1347,13 +1347,24 @@ img.logo {
     margin-bottom: 5vh;
 }
 
+.checkout-header {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    color: #000000;
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
 .item {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 2vh 1vw;
-    border-bottom: 1px solid #B5B5B5;
+    border-bottom: 0.1vh solid #B5B5B5;
 }
 
 .item .buttons {
@@ -1362,23 +1373,47 @@ img.logo {
     gap: 1vh;
 }
 
+.plus-btn, .minus-btn {
+    background: none !important;
+    width: 1.5vw !important; /* Smaller size */
+    height: 1.5vw !important; /* Smaller size */
+}
+
+.plus-btn img, .minus-btn img {
+    width: 100% !important;
+    height: auto !important;
+    background: none !important; /* Ensure no background */
+}
+
 .delete-btn,
 .like-btn {
-    width: 18px;
-    height: 18px;
+    width: 1.5vw !important; /* Smaller size */
+    height: 1.5vw !important; /* Smaller size */
     cursor: pointer;
+    background: none !important; /* Ensure no background */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    transition: transform 0.3s ease; /* Add transition for animation */
 }
 
-.delete-btn {
-    background: url('images/delete-icn.svg') no-repeat center;
+.delete-btn img,
+.like-btn img {
+    width: 1.5vw !important;
+    height: 1.5vw !important;
+    background: none !important; /* Ensure no background */
 }
 
-.like-btn {
-    background: url('images/heart.svg') no-repeat center;
+.like-btn.is-active img {
+    content: url('images/heart-filled.svg'); /* Change image when active */
+    transform: scale(1.2); /* Scale up the icon */
 }
 
-.is-active {
-    background: url('images/heart-filled.svg') no-repeat center;
+.like-btn img {
+    transition: transform 0.3s ease; /* Add transition for animation */
+}
+
+.like-btn.is-active img {
+    transform: scale(1.2); /* Scale up the icon */
 }
 
 .image {
@@ -1412,28 +1447,88 @@ img.logo {
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0;
+}
+
+.quantity button img {
+    width: 1.5vw !important;
+    height: 1.5vw !important;
+    background: none !important; /* Ensure no background */
 }
 
 .quantity input {
-    width: 40px;
+    width: 6vw;
     text-align: center;
-    border: 1px solid #ccc;
-    margin: 0 10px;
+    border: 0.1vh solid #ccc;
+    margin: 0 1vw;
     font-size: 1vw;
 }
 
 .total-price {
-    font-size: 1.5vw;
-    font-weight: 700;
-    width: 100px; /* Fixed width to prevent layout shift */
-    text-align: right; /* Align text to the right */
+    font-size: 1.2vw;
+    font-weight: 400;
+    width: 10vw; 
+    text-align: right; 
+    font-family: "Bebas Neue", serif;
+}
+
+.subtotal, .delivery-fee, .total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1vw;
+    font-weight: 400;
+    margin-top: 2vh;
+    padding: 2vh 1vw;
+    font-family: "Montserrat", serif;
+}
+
+.subtotal span:last-child, .delivery-fee span:last-child, .total span:last-child {
+    font-family: "Bebas Neue", serif;
+    font-size: 1.2vw;
+}
+
+.promo-code {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vh;
+    padding: 2vh 1vw;
+    font-family: "Montserrat", serif;
+}
+
+.promo-code input {
+    padding: 1vh;
+    font-size: 1vw;
+    border: 0.1vh solid #ccc;
+    border-radius: 0.5vw;
+    width: 70%;
+}
+
+.promo-code button {
+    padding: 1vh 2vw;
+    font-size: 1vw;
+    border: none;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    font-family: "Montserrat", serif;
+    border-radius: 0.5vw;
+    margin-left: 1vw;
+}
+
+.total-divider {
+    width: 100%;
+    height: 0.1vh;
+    background-color: #B5B5B5;
+    border: none;
+    margin: 2vh 0;
 }
 
 button[class*=btn] {
-    width: 30px;
-    height: 30px;
+    width: 3vw !important;
+    height: 3vw !important;
     background-color: #E1E8EE;
-    border-radius: 6px;
+    border-radius: 0.6vw;
     border: none;
     cursor: pointer;
 }
@@ -1448,7 +1543,8 @@ button.checkout-btn {
     border-radius: 20vw;
     padding: 2vh 13vw;
     line-height: 100%;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     font-family: "Bebas Neue", serif;
     border: none;
     font-weight: 300;
@@ -1457,6 +1553,8 @@ button.checkout-btn {
     color: white;
     background-color: rgb(0, 0, 0);
     transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+    margin-left: 54vw;
 }
 
 button.checkout-btn:hover {

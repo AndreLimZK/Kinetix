@@ -32,14 +32,18 @@
     <div class="shopping-cart">
       <!-- Title -->
       <div class="title">
-          Shopping Bag
+          Shopping Cart
       </div>
      
       <!-- Product #1 -->
       <div class="item">
         <div class="buttons">
-          <span class="delete-btn"></span>
-          <span class="like-btn"></span>
+          <button class="delete-btn" type="button">
+            <img src="images/cross.svg" alt="Delete">
+          </button>
+          <button class="like-btn" type="button">
+            <img src="images/heart.svg" alt="Like">
+          </button>
         </div>
      
         <div class="image">
@@ -68,8 +72,12 @@
       <!-- Product #2 -->
       <div class="item">
         <div class="buttons">
-          <span class="delete-btn"></span>
-          <span class="like-btn"></span>
+          <button class="delete-btn" type="button">
+            <img src="images/cross.svg" alt="Delete">
+          </button>
+          <button class="like-btn" type="button">
+            <img src="images/heart.svg" alt="Like">
+          </button>
         </div>
      
         <div class="image">
@@ -98,8 +106,12 @@
       <!-- Product #3 -->
       <div class="item">
         <div class="buttons">
-          <span class="delete-btn"></span>
-          <span class="like-btn"></span>
+          <button class="delete-btn" type="button">
+            <img src="images/cross.svg" alt="Delete">
+          </button>
+          <button class="like-btn" type="button">
+            <img src="images/heart.svg" alt="Like">
+          </button>
         </div>
      
         <div class="image">
@@ -124,6 +136,37 @@
      
         <div class="total-price">$349</div>
       </div>
+
+      <!-- Checkout Header -->
+      <div class="checkout-header">
+        CHECKOUT
+      </div>
+
+      <!-- Subtotal Section -->
+      <div class="subtotal">
+        <span>Subtotal:</span>
+        <span id="subtotal-price">$0.00</span>
+      </div>
+
+      <!-- Delivery Fee Section -->
+      <div class="delivery-fee">
+        <span>Delivery Fee:</span>
+        <span id="delivery-fee">$0.00</span>
+      </div>
+
+      <!-- Promo Code Section -->
+      <div class="promo-code">
+        <input type="text" id="promo-code-input" placeholder="DISCOUNT10">
+        <button id="apply-promo-button">Apply</button>
+      </div>
+
+      <!-- Total Section -->
+      <hr class="total-divider">
+      <div class="total">
+        <span>Total:</span>
+        <span id="total-price">$0.00</span>
+      </div>
+      <hr class="total-divider">
 
       <button class="checkout-btn" onClick="location.href='checkOut.html'">CHECK OUT</button>
   </div>
