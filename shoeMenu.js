@@ -1,74 +1,42 @@
-// Function to get query parameter by name
-function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const apiKey = '67a8c617c4c19ad0a71c2c02';
+    const apiUrl = 'https://kinetix-a8ba.restdb.io/rest/shoes';
 
-// Function to fetch shoe data from RestDB using jQuery AJAX
-function fetchShoeData(shoeId) {
-    const apiKey = '67a8c617c4c19ad0a71c2c02'; // Replace with your RestDB API key
-    const url = `https://kinetix-a8ba.restdb.io/rest/shoes?q={"id":"${shoeId}"}`; // Replace with your RestDB URL
-    const mediaUrl = 'https://kinetix-a8ba.restdb.io/media/'; // Replace with your RestDB media URL
-
-    console.log(`Fetching data for shoe ID: ${shoeId}`);
-    console.log(`Request URL: ${url}`);
-
-    var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": url,
-        "method": "GET",
-        "headers": {
-            "content-type": "application/json",
-            "x-apikey": apiKey,
-            "cache-control": "no-cache"
+    fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json',
+            'x-apikey': apiKey,
+            'cache-control': 'no-cache'
         }
-    };
-
-    return $.ajax(settings).done(function (response) {
-        console.log('Full shoe data:', response[0]); // Debug log
-
-        // Handle image URL construction
-        if (response[0] && response[0].image) {
-            const imageUrl = `${mediaUrl}${response[0].image}`;
-            response[0].imageUrl = imageUrl;
-            console.log('Constructed image URL:', imageUrl); // Debug log
-        }
-
-        return response[0];
-    }).fail(function (error) {
-        console.error('Error fetching shoe data:', error);
-        return null;
+    })
+    .then(response => response.json())
+    .then(data => {
+        updateShoeMenu(data);
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
     });
-}
 
-// Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the shoe id from the URL
-    const shoeId = getQueryParam('id');
-    console.log(`Shoe ID from URL: ${shoeId}`); // Debug log
+    function updateShoeMenu(data) {
+        const productTitle = document.querySelector('.product-title');
+        const productPrice = document.querySelector('.product-price');
+        const productImage = document.getElementById('main-shoe-image');
+        const productVar = document.querySelector('.product-var');
 
-    if (!shoeId) {
-        console.error('No shoe ID found in URL');
-        document.getElementById('shoe-name').textContent = 'Shoe not found';
-        return;
+        // Assuming data is an array of products
+        const product = data[0]; // Example: Get the first product
+
+        productTitle.textContent = product.name;
+        productPrice.textContent = `$${product.price}`;
+        productImage.src = product.image;
+
+        productVar.innerHTML = ''; // Clear existing variants
+        product.variants.forEach(variant => {
+            const variantElement = document.createElement('a');
+            variantElement.href = '#';
+            variantElement.innerHTML = `<img src="${variant.image}" alt="${variant.color}">`;
+            productVar.appendChild(variantElement);
+        });
     }
-
-    // Fetch and display the shoe data
-    fetchShoeData(shoeId).then(shoe => {
-        if (shoe) {
-            if (shoe.imageUrl) {
-                document.getElementById('shoe-image').src = shoe.imageUrl;
-            } else {
-                console.error('No image URL available for this shoe');
-            }
-            document.getElementById('shoe-name').textContent = shoe.name;
-            document.getElementById('shoe-price').textContent = `$${shoe.price}`;
-        } else {
-            document.getElementById('shoe-name').textContent = 'Shoe not found';
-            document.getElementById('shoe-price').textContent = '';
-        }
-    }).catch(error => {
-        console.error('Error displaying shoe data:', error);
-    });
 });
