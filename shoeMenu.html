@@ -4,55 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik+Doodle+Shadow&family=Rubik+Glitch&display=swap" rel="stylesheet">
     <title>Shoe Menu</title>
 </head> 
 <body>
     <!-- navigation bar -->
     <nav>
-        <a class="nav-bar" id="home" href="index.htlml" > HOME</a>
-        <a class="nav-bar" id="featured" href="featured.htlml" > FEATURED</a>
-        <a class="nav-bar" id="men" href="men.htlml" > MEN</a>
-        <a class="nav-bar" id="women" href="women.htlml" > WOMEN</a>
-        <a class="nav-bar" id="kids" href="kids.htlml" > KIDS</a>
-        <a class="nav-bar" id="account" href="account.htlml" > ACCOUNT</a>
-        <a class="nav-bar" id="cart" href="shopping_cart.htlml" > CART</a>
-        <a class="nav-bar" id="notis" href="notification.htlml" > NOTIS</a>
-    </nav>
+      <div class="grp-1">
+          <a class="nav-bar" id="home" href="index.html" > <img class="nav-icon" src="images/kinetix-logo.png" alt="Kinetix Logo"
+              height="40px" width="auto"></a>
+      </div>
+      <div class="grp-2">
+          <a class="nav-bar" id="home" href="index.html" > HOME</a>
+          <a class="nav-bar" id="men" href="shoeShop.html" > MEN</a>
+          <a class="nav-bar" id="women" href="shoeShop.html" > WOMEN</a>
+          <a class="nav-bar" id="kids" href="shoeShop.html" > KIDS</a>
+      </div>
+      <div class="grp-3">
+          <a class="nav-bar" id="account" href="account.html" > <img class="nav-icon" src="images/account.svg" alt="Account"></a>
+          <a class="nav-bar" id="cart" href="shoppingCart.html" > <img class="nav-icon" src="images/shopping-cart.svg" alt="Cart"></a>
+          <a class="nav-bar" id="contact" href="contacts.html" > <img class="nav-icon" src="images/contact.svg" alt="Contact"></a>
+      </div>
+  </nav>
 
     <!-- Shoe Display -->
     <main class="product-details">
-        <h1 class="product-title">SHOE NAME</h1>
-        <p class="product-price">Price</p>
-  
-        <div class="product-image">
-          <img id="main-shoe-image" src="shoe-blue.jpg" alt="Shoe Image">
+
+      <div class="product-image">
+        <img id="main-shoe-image" src="images/model-1.jpg" alt="Shoe Image">
+      </div>
+
+      <div class="product-grp2">
+        <div class="product-info">
+          <h1 class="product-title">SHOE NAME</h1>
+          <p class="product-price">Price</p>
         </div>
-  
-        <div class="color-options">
-          <h2>Select Color</h2>
-          <div class="colors">
-            <img class="color-thumbnail" src="shoe-blue.jpg" alt="Blue Shoe" onclick="changeShoeImage('shoe-blue.jpg')">
-            <img class="color-thumbnail" src="shoe-black.jpg" alt="Black Shoe" onclick="changeShoeImage('shoe-black.jpg')">
-            <img class="color-thumbnail" src="shoe-orange.jpg" alt="Orange Shoe" onclick="changeShoeImage('shoe-orange.jpg')">
-            <img class="color-thumbnail" src="shoe-pink.jpg" alt="Pink Shoe" onclick="changeShoeImage('shoe-pink.jpg')">
-          </div>
+
+        <div class="product-var">
+            <a href="#">
+              <img src="images/shoe-1.jpg" alt="Sky Blue">
+            </a>
+            <a href="#">
+              <img src="images/shoe-1.jpg" alt="Sky Blue">
+            </a>
+            <a href="#">
+              <img src="images/shoe-1.jpg" alt="Sky Blue">
+            </a>
+            <a href="#">
+              <img src="images/shoe-1.jpg" alt="Sky Blue">
+            </a>
         </div>
-  
+    
         <div class="size-selector">
           <h2>Select Size</h2>
-          <div class="sizes">
-            <button class="size-button">US 8 / UK 7.5</button>
-            <button class="size-button">US 9 / UK 8.5</button>
-            <button class="size-button">US 10 / UK 9.5</button>
-            <button class="size-button">US 11 / UK 10.5</button>
-          </div>
+          <h2>Size Guide</h2>
         </div>
 
-        <button>Add to Cart</button>
+        <div class="sizes">
+          <button class="size-button" onclick="selectSize(this)">US M 7 / W 8.5</button>
+          <button class="size-button" onclick="selectSize(this)">US M 7.5 / W 9</button>
+          <button class="size-button" onclick="selectSize(this)">US M 8 / W 9.5</button>
+          <button class="size-button" onclick="selectSize(this)">US M 8.5 / W 10</button>
+          <button class="size-button" onclick="selectSize(this)">US M 9 / W 10.5</button>
+          <button class="size-button" onclick="selectSize(this)">US M 9.5 / W 11</button>
+          <button class="size-button" onclick="selectSize(this)">US M 10 / W 11.5</button>
+          <button class="size-button" onclick="selectSize(this)">US M 10.5 / W 12</button>
+          <button class="size-button" onclick="selectSize(this)">US M 11 / W 12.5</button>
+          <button class="size-button" onclick="selectSize(this)">US M 11.5 / W 13</button>
+          <button class="size-button" onclick="selectSize(this)">US M 12 / W 13.5</button>
+          <button class="size-button" onclick="selectSize(this)">US M 13 / W 14.5</button>
+        </div>
+
+        <div class="add-to-cart">
+          <button>Add to Cart</button>
+        </div>
+      </div>
     </main>
 
+    <div class="recommendations">
+
+      <div class="recommendation-header">
+        <h2>You may also like:</h2>
+      </div>
+
+      <div class="recommended-shoes">
+        <a href="#">
+          <img src="images/shoe-1.jpg" alt="Sky Blue">
+          <p>Shoe Name</p>
+        </a>
+        <a href="#">
+          <img src="images/shoe-1.jpg" alt="Sky Blue">
+          <p>Shoe Name</p>
+        </a>
+        <a href="#">
+          <img src="images/shoe-1.jpg" alt="Sky Blue">
+          <p>Shoe Name</p>
+        </a>
+        <a href="#">
+          <img src="images/shoe-1.jpg" alt="Sky Blue">
+          <p>Shoe Name</p>
+        </a>
+        <a href="#">
+          <img src="images/shoe-1.jpg" alt="Sky Blue">
+          <p>Shoe Name</p>
+        </a>
+      </div>
+    </div>
+
     <!-- footer -->
-    <footer>
+    <footer class="shoeShop-footer">
       <div class="footer-container">
           <h4> KINETIX'S RUNNING SHOE </h4>
           <div class="footer-content">
@@ -88,7 +150,6 @@
           </div>
       </div>
   </footer>
-
-
+  <script src="size.js"></script>
 </body>
 </html>
