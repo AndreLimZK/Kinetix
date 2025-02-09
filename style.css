@@ -3,6 +3,7 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 
 /* Navigation Bar */
@@ -14,7 +15,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    width: 100vw;
+    width: 100%;
 }
 
 .nav-bar {
@@ -24,13 +25,13 @@ nav {
     font-style: normal;
     font-size: 1.5vw; 
     color: #232323;
-    margin: 0 1vw;
+    margin: 0 1rem;
 }
 
 .nav-icon {
     height: 3vh; 
     width: auto; 
-    margin-right: 3vw;  
+    margin-right: 3rem;  
 }
 
 .grp-2 {
@@ -1927,4 +1928,142 @@ button.checkout-btn:hover {
     height: auto;
     object-fit: cover;
     margin-left: -40vw;
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        font-size: 1.2rem;
+    }
+
+    .nav-icon {
+        margin-right: 2rem;
+    }
+
+    .shoelaces {
+        margin-left: -20vw;
+        width: 20%;
+    }
+
+    .shoe-sole {
+        margin-left: -20vw;
+        width: 20%;
+    }
+
+    .shoe-top {
+        margin-left: -20vw;
+        width: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        font-size: 1rem;
+    }
+
+    .nav-icon {
+        margin-right: 1rem;
+    }
+
+    .shoelaces {
+        margin-left: -10vw;
+        width: 30%;
+    }
+
+    .shoe-sole {
+        margin-left: -10vw;
+        width: 30%;
+    }
+
+    .shoe-top {
+        margin-left: -10vw;
+        width: 30%;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    margin-top: 50vh;
+}
+
+footer h4 {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem; 
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content p {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 1vh; 
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+footer .footer-bottom p {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+}
+
+footer .footer-bottom {
+    display: flex;
+    gap: 4vw; 
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 2vw;
+    margin-top: 5vh;
+}
+
+/* Responsive styles for footer */
+@media (max-width: 768px) {
+    footer h4 {
+        font-size: 1.2rem;
+    }
+
+    .footer-content p {
+        font-size: 0.7rem;
+    }
+
+    footer .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+}
+
+@media (max-width: 480px) {
+    footer h4 {
+        font-size: 1rem;
+    }
+
+    .footer-content p {
+        font-size: 0.6rem;
+    }
+
+    footer .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
 }
