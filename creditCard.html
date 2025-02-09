@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik+Doodle+Shadow&family=Rubik+Glitch&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form>
-        <input type="number" placeholder="Card Number" required>
-        <input type="text" placeholder="Cardholder's Name" required>
-        <input type="number" placeholder="Expiry Date" required>
-        <input type="password" placeholder="Security Code" required>
-        
-        <input type="submit" value="Submit">
-    </form>
+    <div class="credit-card-container">
+        <h2 class="credit-card-header">Credit Card Payment</h2>
+        <form class="credit-card-form" id="credit-card-form">
+            <input type="text" id="card-number" placeholder="Card Number" pattern="\d{16}" required>
+            <input type="text" id="cardholder-name" placeholder="Cardholder's Name" required>
+            <input type="text" id="expiry-date" placeholder="Expiry Date (MM/YY)" pattern="(0[1-9]|1[0-2])\/?([0-9]{2})" required>
+            <input type="password" id="security-code" placeholder="Security Code" pattern="\d{3}" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 
+    <script src="creditCard.js"></script>
 </body>
 </html>

@@ -1325,7 +1325,7 @@ img.logo {
     text-decoration: none;
 }
 
-/* Shopping Cart Styles */
+/* shoppingCart.html */
 
 .shopping-cart {
     width: 80vw;
@@ -1375,49 +1375,49 @@ img.logo {
 
 .plus-btn, .minus-btn {
     background: none !important;
-    width: 1.5vw !important; /* Smaller size */
-    height: 1.5vw !important; /* Smaller size */
+    width: 1.5vw !important; 
+    height: 1.5vw !important; 
 }
 
 .plus-btn img, .minus-btn img {
     width: 100% !important;
     height: auto !important;
-    background: none !important; /* Ensure no background */
+    background: none !important; 
 }
 
 .delete-btn,
 .like-btn {
-    width: 1.5vw !important; /* Smaller size */
-    height: 1.5vw !important; /* Smaller size */
+    width: 1.5vw !important; 
+    height: 1.5vw !important; 
     cursor: pointer;
-    background: none !important; /* Ensure no background */
-    border: none; /* Remove border */
-    padding: 0; /* Remove padding */
-    transition: transform 0.3s ease; /* Add transition for animation */
+    background: none !important;
+    border: none;
+    padding: 0;
+    transition: transform 0.3s ease;
 }
 
 .delete-btn img,
 .like-btn img {
     width: 1.5vw !important;
     height: 1.5vw !important;
-    background: none !important; /* Ensure no background */
+    background: none !important; 
 }
 
 .like-btn.is-active img {
-    content: url('images/heart-filled.svg'); /* Change image when active */
-    transform: scale(1.2); /* Scale up the icon */
+    content: url('images/heart-filled.svg'); 
+    transform: scale(1.2); 
 }
 
 .like-btn img {
-    transition: transform 0.3s ease; /* Add transition for animation */
+    transition: transform 0.3s ease; 
 }
 
 .like-btn.is-active img {
-    transform: scale(1.2); /* Scale up the icon */
+    transform: scale(1.2);
 }
 
 .image {
-    width: 10vw; /* Fixed width for the image container */
+    width: 10vw;
     height: auto;
 }
 
@@ -1431,7 +1431,7 @@ img.logo {
     display: flex;
     flex-direction: column;
     gap: 0.5vh;
-    width: 20vw; /* Fixed width for the description container */
+    width: 20vw;
 }
 
 .description span {
@@ -1453,7 +1453,7 @@ img.logo {
 .quantity button img {
     width: 1.5vw !important;
     height: 1.5vw !important;
-    background: none !important; /* Ensure no background */
+    background: none !important;
 }
 
 .quantity input {
@@ -1558,5 +1558,256 @@ button.checkout-btn {
 }
 
 button.checkout-btn:hover {
+    opacity: 0.8;
+}
+
+/* checkOut.html */
+
+.delivery-header {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vw;
+    color: #000000;
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.delivery-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10vw;
+    margin-bottom: 5vh;
+    align-items: center;
+    width: 80%;
+    gap: 5vw;
+}
+
+.delivery-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+}
+
+.delivery-info input[type="email"],
+.delivery-info input[type="tel"],
+.delivery-info input[type="text"] {
+    width: 100%;
+    padding: 1.5vh;
+    font-size: 1vw;
+    border: 0.1vh solid #ccc;
+    border-radius: 0.5vw;
+    font-family: "Montserrat", serif;
+}
+
+.delivery-info input[type="email"]::placeholder,
+.delivery-info input[type="tel"]::placeholder,
+.delivery-info input[type="text"]::placeholder {
+    color: #999;
+}
+
+.shipping {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+}
+
+.shipping-method {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.shipping-method input[type="radio"] {
+    display: none; 
+}
+
+.shipping-method input[type="radio"] + label {
+    position: relative;
+    padding-left: 2vw;
+    cursor: pointer;
+    font-family: "Montserrat", serif;
+    font-size: 1vw;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+.shipping-method input[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1vw;
+    height: 1vw;
+    border: 0.1vh solid #000000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.shipping-method input[type="radio"]:checked + label::before {
+    background-color: #000000;
+}
+
+.shipping-method input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 0.3vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.4vw;
+    height: 0.4vw;
+    border-radius: 50%;
+}
+
+.payment-method {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.payment-method button {
+    padding: 1.5vh 3vw;
+    font-size: 1.2vw;
+    border: none;
+    border-radius: 0.5vw;
+    font-family: "Bebas Neue", serif;
+    color: white;
+    background-color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.payment-method button:hover {
+    opacity: 0.8;
+}
+
+.contact-no {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+.contact-no p {
+    font-family: "Montserrat", serif;
+    font-size: 1vw;
+    color: #000000;
+}
+
+.shipping-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    margin: 0 auto;
+}
+
+/* creditCard.html */
+
+.credit-card-container {
+    width: 40vw;
+    margin: 10vh auto;
+    padding: 3vh 5vw;
+    border-radius: 1vw;
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.credit-card-header {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vw;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.credit-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.credit-card-form input[type="number"],
+.credit-card-form input[type="text"],
+.credit-card-form input[type="password"] {
+    width: 100%;
+    padding: 1.5vh;
+    font-size: 1vw;
+    border: 0.1vh solid #ccc;
+    border-radius: 0.5vw;
+    font-family: "Montserrat", serif;
+}
+
+.credit-card-form input[type="number"]::placeholder,
+.credit-card-form input[type="text"]::placeholder,
+.credit-card-form input[type="password"]::placeholder {
+    color: #999;
+    font-family: "Montserrat", serif;
+}
+
+.credit-card-form input[type="submit"] {
+    padding: 1.5vh 3vw;
+    font-size: 1.2vw;
+    border: none;
+    border-radius: 0.5vw;
+    font-family: "Bebas Neue", serif;
+    color: white;
+    background-color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 5vh;
+}
+
+.credit-card-form input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+/* Payment Complete Styles */
+.payment-complete-container {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.payment-complete-header {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vw;
+    color: #000000;
+    margin-bottom: 2vh;
+}
+
+.payment-complete-message {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+    color: #000000;
+    margin-bottom: 4vh;
+}
+
+.return-home-btn {
+    margin-top: 3vh;
+    border-radius: 20vw;
+    padding: 2vh 13vw;
+    line-height: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Bebas Neue", serif;
+    border: none;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1vw;
+    color: white;
+    background-color: rgb(0, 0, 0) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+    margin-left: 36.5vw;
+}
+.return-home-btn:hover {
     opacity: 0.8;
 }

@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik+Doodle+Shadow&family=Rubik+Glitch&display=swap" rel="stylesheet">
-    <title>Payment Complete</title></head>
+    <title>Payment Complete</title>
+</head>
 <body>
     <!-- navigation bar -->
     <nav>
@@ -29,33 +30,42 @@
     </nav>
 
     <!-- Content -->
-    <h2>Payment Complete</h2>
-    <p>Thank you for shopping with us!</p>
-    <button onclick="location.href='index.html'">Return to home page</button>
+    <div class="payment-complete-container">
+        <h2 class="payment-complete-header">Payment Complete</h2>
+        <p class="payment-complete-message">Thank you for shopping with us!</p>
+        <button class="return-home-btn" onclick="location.href='index.html'">Return to home page</button>
 
-    <div class="recommendations">
-        <h4>You may also like: </h4>
-        <div class="product-card">
-            <img alt="Shoe Image">
-            <p>Shoe Name</p>
-          </div>
-          <div class="product-card">
-            <img alt="Shoe Image">
-            <p>Shoe Name</p>
-          </div>
-          <div class="product-card">
-            <img alt="Shoe Image">
-            <p>Shoe Name</p>
-          </div>
-          <div class="product-card">
-            <img alt="Shoe Image">
-            <p>Shoe Name</p>
-          </div>
+        <div class="recommendations">
+            <div class="recommendation-header">
+                <h2>You may also like:</h2>
+            </div>
+            <div class="recommended-shoes">
+                <a href="#">
+                    <img src="images/shoe-1.jpg" alt="Sky Blue">
+                    <p>Shoe Name</p>
+                </a>
+                <a href="#">
+                    <img src="images/shoe-1.jpg" alt="Sky Blue">
+                    <p>Shoe Name</p>
+                </a>
+                <a href="#">
+                    <img src="images/shoe-1.jpg" alt="Sky Blue">
+                    <p>Shoe Name</p>
+                </a>
+                <a href="#">
+                    <img src="images/shoe-1.jpg" alt="Sky Blue">
+                    <p>Shoe Name</p>
+                </a>
+                <a href="#">
+                    <img src="images/shoe-1.jpg" alt="Sky Blue">
+                    <p>Shoe Name</p>
+                </a>
+            </div>
+        </div>
     </div>
 
-
     <!-- footer -->
-    <footer>
+    <footer class="index-footer">
         <div class="footer-container">
             <h4> KINETIX'S RUNNING SHOE </h4>
             <div class="footer-content">

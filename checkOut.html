@@ -30,27 +30,45 @@
     </nav>
 
     <!-- Content -->
-    <h2>Delivery and Shipping </h2>
-    <input type="email" placeholder="Email" required>
-    SG (+65) <input type="number" placeholder="Contact Number" required>
-    <input type="text" placeholder="First Name" required> 
-    <input type="text" placeholder="Last Name" required>
-    <input type="text" placeholder="Address Line 1" required>
-    <input type="text" placeholder="Address Line 2 (Optional)">
-    <input type="text" placeholder="Apt, Suite, Building">
-    <input type="number" placeholder="Zip Code" required>
-    <div class="shipping">
-        <input type="radio" id="standard" name="delivery_method" value="standard">
-        <label for="standard">Standard Shipping</label><br>
-        <input type="radio" id="express" name="delivery_method" value="express">
-        <label for="express">Express Shipping</label><br>
-    </div>
+    <h2 class="delivery-header">Delivery and Shipping </h2>
+    <form id="delivery-form">
+        <div class="delivery-container">
+            <div class="delivery-info">
+                <input type="email" id="email" placeholder="Email" required>
+                <div class="contact-no">
+                    <p>SG (+65)</p>
+                    <input type="tel" id="contact-number" placeholder="Contact Number" pattern="[0-9]{8}" required>
+                </div>
+                <input type="text" id="first-name" placeholder="First Name" required> 
+                <input type="text" id="last-name" placeholder="Last Name" required>
+                <input type="text" id="address-line-1" placeholder="Address Line 1" required>
+                <input type="text" id="address-line-2" placeholder="Address Line 2 (Optional)">
+                <input type="text" id="apt-suite-building" placeholder="Apt, Suite, Building">
+                <input type="text" id="zip-code" placeholder="Zip Code" pattern="[0-9]{6}" required>
+            </div>
 
-    <button onclick="location.href='paynow.html'">PAYNOW</button>
-    <button onclick="location.href='creditCard.html'">CREDIT CARD</button>
+            <div class="shipping">
+                <div class="shipping-method">
+                    <div class="shipping-header">
+                        <input type="radio" id="standard" name="delivery_method" value="standard" required>
+                        <label for="standard">Standard Shipping</label><br>
+                    </div>
+                    <div class="shipping-header">
+                        <input type="radio" id="express" name="delivery_method" value="express" required>
+                        <label for="express">Express Shipping</label><br>
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <button type="submit" onclick="submitForm('paynow.html')">PAYNOW</button>
+                    <button type="submit" onclick="submitForm('creditCard.html')">CREDIT CARD</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
 
     <!-- footer -->
-    <footer>
+    <footer class="index-footer">
         <div class="footer-container">
             <h4> KINETIX'S RUNNING SHOE </h4>
             <div class="footer-content">
@@ -86,5 +104,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="checkOut.js"></script>
 </body>
 </html>
