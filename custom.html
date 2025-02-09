@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik+Doodle+Shadow&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <title>Customize</title>
+</head> 
+<body>
+    <!-- navigation bar -->
+    <nav>
+      <div class="grp-1">
+          <a class="nav-bar" id="home" href="index.html" > <img class="nav-icon" src="images/kinetix-logo.png" alt="Kinetix Logo"
+              height="40px" width="auto"></a>
+      </div>
+      <div class="grp-2">
+          <a class="nav-bar" id="home" href="index.html" > HOME</a>
+          <a class="nav-bar" id="men" href="shoeShop.html" > MEN</a>
+          <a class="nav-bar" id="women" href="shoeShop.html" > WOMEN</a>
+          <a class="nav-bar" id="kids" href="shoeShop.html" > KIDS</a>
+      </div>
+      <div class="grp-3">
+          <a class="nav-bar" id="account" href="account.html" > <img class="nav-icon" src="images/account.svg" alt="Account"></a>
+          <a class="nav-bar" id="cart" href="shoppingCart.html" > <img class="nav-icon" src="images/shopping-cart.svg" alt="Cart"></a>
+          <a class="nav-bar" id="contact" href="contacts.html" > <img class="nav-icon" src="images/contact.svg" alt="Contact"></a>
+      </div>
+  </nav>
+
+    <!-- Shoe Display -->
+    <main class="shoe-customization">
+
+        <h1> Customize your own shoe! </h1>
+
+        <!-- Shoe top -->
+        <div class="shoe-top">
+            <input type="radio" id="sky-blue" name="shoe-top">
+            <img src="images/shoe-1.jpg" alt="Sky Blue">
+            <input type="radio" id="crimson-red" name="shoe-top">
+            <img src="images/shoe-1.jpg" alt="Crimson Red">
+            <input type="radio" id="mulberry-purple" name="shoe-top">
+            <img src="images/shoe-1.jpg" alt="Mulberry Purple">
+            <input type="radio" id="midnight-black" name="shoe-top">
+            <img src="images/shoe-1.jpg" alt="Midnight Black">
+        </div>
+
+        <!-- Shoe Sole -->
+        <div class="shoe-sole">
+            <input type="radio" id="white" name="shoe-sole">
+              <img src="images/shoe-1.jpg" alt="White">
+              <input type="radio" id="grey" name="shoe-sole">
+              <img src="images/shoe-1.jpg" alt="Grey">
+              <input type="radio" id="alabaster" name="shoe-sole">
+              <img src="images/shoe-1.jpg" alt="Alabaster">
+              <input type="radio" id="black" name="shoe-sole">
+              <img src="images/shoe-1.jpg" alt="Black">
+        </div>
+
+        <!-- Shoelaces -->
+        <div class="shoelaces">
+            <input type="radio" id="yellow-lace" name="shoelace">
+              <img src="images/shoe-1.jpg" alt="Yellow">
+              <input type="radio" id="green-lace" name="shoelace">
+              <img src="images/shoe-1.jpg" alt="Green">
+              <input type="radio" id="white-lace" name="shoelace">
+              <img src="images/shoe-1.jpg" alt="White">
+              <input type="radio" id="black-lace" name="shoelace">
+              <img src="images/shoe-1.jpg" alt="Black">
+
+        </div>
+    
+        <div class="size-selector">
+          <h2>Select Size</h2>
+          <h2>Size Guide</h2>
+        </div>
+
+        <div class="sizes">
+          <button class="size-button" onclick="selectSize(this)">US M 7 / W 8.5</button>
+          <button class="size-button" onclick="selectSize(this)">US M 7.5 / W 9</button>
+          <button class="size-button" onclick="selectSize(this)">US M 8 / W 9.5</button>
+          <button class="size-button" onclick="selectSize(this)">US M 8.5 / W 10</button>
+          <button class="size-button" onclick="selectSize(this)">US M 9 / W 10.5</button>
+          <button class="size-button" onclick="selectSize(this)">US M 9.5 / W 11</button>
+          <button class="size-button" onclick="selectSize(this)">US M 10 / W 11.5</button>
+          <button class="size-button" onclick="selectSize(this)">US M 10.5 / W 12</button>
+          <button class="size-button" onclick="selectSize(this)">US M 11 / W 12.5</button>
+          <button class="size-button" onclick="selectSize(this)">US M 11.5 / W 13</button>
+          <button class="size-button" onclick="selectSize(this)">US M 12 / W 13.5</button>
+          <button class="size-button" onclick="selectSize(this)">US M 13 / W 14.5</button>
+        </div>
+
+        <div class="add-to-cart">
+          <a href="shoppingCart.html"><button>Add to Cart</button></a>
+          
+        </div>
+      </div>
+    </main>
+
+    <div class="recommendations">
+
+      <div class="recommendation-header">
+        <h2>You may also like:</h2>
+      </div>
+
+      <div class="recommended-shoes">
+        <a href="#">
+          <img src="images/shoe-1.jpg" alt="Sky Blue">
+          <p>Shoe Name</p>
+        </a>
+        <a href="#">
+          <img src="images/shoe-1.jpg" alt="Sky Blue">
+          <p>Shoe Name</p>
+        </a>
+        <a href="#">
+          <img src="images/shoe-1.jpg" alt="Sky Blue">
+          <p>Shoe Name</p>
+        </a>
+        <a href="#">
+          <img src="images/shoe-1.jpg" alt="Sky Blue">
+          <p>Shoe Name</p>
+        </a>
+        <a href="#">
+          <img src="images/shoe-1.jpg" alt="Sky Blue">
+          <p>Shoe Name</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="shoeShop-footer">
+      <div class="footer-container">
+          <h4> KINETIX'S RUNNING SHOE </h4>
+          <div class="footer-content">
+              <p>
+                  Kinetix is a modern e-commerce platform specializing in running shoes, designed to 
+                  cater to athletes, fitness enthusiasts, and casual runners alike. The platform 
+                  combines cutting-edge technology with user-centric design to deliver a seamless 
+                  shopping experience.
+              </p>
+              <p>
+                  With a curated selection of top-tier brands and performance-focused footwear, 
+                  Kinetix ensures that customers find the perfect fit for their needs. Leveraging 
+                  advanced AI-driven recommendations, the platform provides personalized suggestions 
+                  based on individual preferences, activity levels, and biomechanics. Beyond product 
+                  offerings, Kinetix emphasizes community engagement by hosting virtual running 
+                  challenges, expert-led webinars, and forums where users can connect and share their 
+                  journeys.
+              </p>  
+              <p>
+                  The platform also integrates a robust feedback system, enabling users to rate and 
+                  review products, fostering trust and transparency. With secure payment options, 
+                  swift delivery services, and hassle-free returns, Kinetix redefines convenience in 
+                  online shopping for runners. By blending innovation, community, and superior 
+                  service, Kinetix is set to become the go-to destination for running enthusiasts
+                  worldwide.
+              </p>
+          </div>
+          <div class="footer-bottom">
+              <p>Cookie Settings</p>
+              <p>Privacy Policy</p>
+              <p>Terms and Conditions</p>
+              <p>©Kinetix Singapore Pte Ltd</p>
+          </div>
+      </div>
+  </footer>
+  <script src="size.js"></script>
+</body>
+</html>

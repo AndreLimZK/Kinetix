@@ -1834,3 +1834,70 @@ button.checkout-btn:hover {
     height: auto;
     margin-bottom: 4vh;
 }
+
+.custom-box-content p, .custom-box-content strong {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    color: #FFFFFF;
+    margin-top: -2vh;
+    margin-left: 1vw;
+}
+
+.custom-box-content p {
+    margin-bottom: -1vh !important;
+}
+
+.custom-box-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    object-fit: fill;
+    background-image: url("images/custom.jpg");
+    width: 90%;
+    height: 80vh;
+    background-size: cover; 
+    background-position: center;
+    margin-left: 5.5vw;
+    gap: 1vh;
+    position: relative; 
+    margin-top: 10vh;   
+}
+
+.shoe-customization {
+    font-family: "Bebas Neue", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2vw;
+    color: #000000;
+    margin-top: -2vh;
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.shoe-top {
+    width: 20px; /* Reduce the width further */
+    max-width: 20px; /* Ensure the width does not exceed this value */
+    height: auto;
+    object-fit: cover;
+}
+
+.shoe-sole {
+    width: 20px; /* Reduce the width further */
+    max-width: 20px; /* Ensure the width does not exceed this value */
+    height: auto;
+    object-fit: cover;
+}
+
+.shoelaces {
+    width: 20px; /* Reduce the width further */
+    max-width: 20px; /* Ensure the width does not exceed this value */
+    height: auto;
+    object-fit: cover;
+}
