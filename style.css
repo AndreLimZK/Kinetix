@@ -1767,7 +1767,8 @@ button.checkout-btn:hover {
     opacity: 0.8;
 }
 
-/* Payment Complete Styles */
+/* payment.html */
+
 .payment-complete-container {
     text-align: center;
     margin-top: 10vh;
@@ -1810,4 +1811,26 @@ button.checkout-btn:hover {
 }
 .return-home-btn:hover {
     opacity: 0.8;
+}
+
+/* paynow.html */
+
+.paynow-container {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.paynow-header {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vw;
+    color: #000000;
+    margin-bottom: 2vh;
+}
+
+.paynow-image {
+    width: 20vw;
+    height: auto;
+    margin-bottom: 4vh;
 }
