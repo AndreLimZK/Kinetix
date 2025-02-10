@@ -1867,6 +1867,26 @@ button.checkout-btn:hover {
     margin-top: 10vh;   
 }
 
+.custom-size-selector {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 5vh;
+    margin-bottom: 3vh; 
+}
+.custom-size-selector h2 {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0vw;
+    margin: 0 auto;
+}
+
+.custom-size-selector :nth-child(2) {
+    text-decoration: underline !important;
+}
+
 .shoe-customization {
     font-family: "Bebas Neue", serif;
     font-weight: 300;
