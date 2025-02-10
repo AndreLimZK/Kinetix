@@ -175,6 +175,11 @@ footer .footer-bottom {
     height: 1.5vw;
 }
 
+.account-content .id img {
+    width: 4vw;
+    height: auto;
+}
+
 .sidebar a {
     font-family: "Montserrat", serif;
     font-weight: 400;
@@ -369,6 +374,11 @@ footer .footer-bottom {
     display: block; 
 }
 
+#whatsapp {
+    height: 4vw;   
+    width: auto;
+}
+
 .contact-footer {
     margin-top: 5vh !important;
 }
@@ -437,6 +447,11 @@ footer .footer-bottom {
     font-style: normal;
     font-size: 0.8vw;
     color: #000000;
+}
+
+.coin {
+    height: 6vw;
+    width: auto;
 }
 
 .claim-button {
@@ -1159,7 +1174,7 @@ img.logo {
     width: 100%;
 }
 
-.add-to-cart button {
+.add-to-cart .btn {
     margin-top: 3vh;
     border-radius: 20vw;
     padding: 2vh 13vw;
@@ -1172,10 +1187,14 @@ img.logo {
     font-size: 1vw;
     color: white;
     background-color: rgb(0, 0, 0);
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.add-to-cart button:hover {
+.add-to-cart a {
+    text-decoration: none;
+}
+
+.add-to-cart .btn:hover {
     opacity: 0.8;
 }
 
