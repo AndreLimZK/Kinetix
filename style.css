@@ -2067,3 +2067,10 @@ footer .footer-bottom {
         gap: 1vh;
     }
 }
+
+.lottie {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
